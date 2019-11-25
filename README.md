@@ -1,17 +1,25 @@
 # book_app
 
+********************************************
+## Number and name of feature: Basic Files
 
-## Number and name of feature: ________________________________
+## Estimate of time needed to complete: One Hour
 
-## Estimate of time needed to complete: _____
+## Start time: 10:15 AM
 
-## Start time: _____
+## Finish time: 11:30 AM
 
-## Finish time: _____
+## Actual time needed to complete: 1.15 min 
+********************************************
+## Number and name of feature: Search field 
 
-## Actual time needed to complete: _____
+## Estimate of time needed to complete: One Hour
 
+## Start time: 12:10 AM
 
+## Finish time: 12:42 AM
+
+## Actual time needed to complete: 32 mins 
 *********************************************************************************************************************
 
 

@@ -16,16 +16,38 @@ const server = express();
 
 server.use(cors());
 
+server.use( express.json() );
+server.use( express.urlencoded({extended:true}));
+server.use( express.static('./public') );
+server.set('view engine', 'ejs');
+
 /*********************************************************************/
 
-// Home Route (http://localhost:3000/)
-server.get('/', (request, response) => {
-    console.log(request);
-    response.status(200).send('Weclome To Our Book App');
+/*************** Test Route *****************/
+server.get('/test', (req,res) => {
+    res.status(200).send('Hello Ya Tester ');
   });
 
+/**************** Render index **************/
+  server.get('/main', (req,res) => {
+    res.render('pages/index');
+  });
 
+/**************** Re-direct index **************/
+  server.get('/main', (req,res) => {
+    console.log('Got here from a get request ... ', req.query);
+    res.redirect('/index.html');
+  });
 
+/************************* Test linked HTML file ********************* */
+server.get('/incoming', (req,res) => {
+    console.log('Got here from a get request ... ', req.query);
+    res.redirect('/thanks.html');
+  });
+  server.post('/incoming', (req,res) => {
+    console.log('Got here from a post request ... ', req.body);
+    res.redirect('/thanks.html');
+  });
 
 
 
