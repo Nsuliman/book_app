@@ -39,6 +39,16 @@ server.get('/test', (req,res) => {
     res.redirect('/index.html');
   });
 
+/************************* Test linked HTML file ********************* */
+server.get('/incoming', (req,res) => {
+    console.log('Got here from a get request ... ', req.query);
+    res.redirect('/thanks.html');
+  });
+  server.post('/incoming', (req,res) => {
+    console.log('Got here from a post request ... ', req.body);
+    res.redirect('/thanks.html');
+  });
+
 
 
 
