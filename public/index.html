@@ -10,12 +10,18 @@
       <form action="/main" method="post">
         <label>
           <span>Name</span>
-          <input name="name" />
+          <input name="name" placeholder='Enter a Tilte Or Author' />
         </label><br><br>
-        <label>
-          <span>Email</span>
-          <input type="email" name="emailAddress" />
-        </label><br><br>
+        <div>
+          <input type="radio" name="select" > 
+          <label for="Tilte">Tilte</label> 
+        </div>
+
+        <div>
+          <input type="radio" name="select" > 
+          <label for="Author">Author</label> 
+        </div>
+          
         <button>Go and Search</button><br><br>
       </form>
     </main>
