@@ -1,18 +1,28 @@
 <!DOCTYPE html>
 <html>
-  <head>
-      <title>Books</title>
-      <link rel="stylesheet" href="styles/base.css" />
-  </head>
-  <body>
+
+<head>
+    <title>Books</title>
+    <link rel="stylesheet" href="styles/base.css" />
+</head>
+
+<body>
     <main>
         <ul>
             <% books.forEach( (book) => { %>
-              <li><%= book.volumeInfo.title %></li>
+            <p> Title : </p>
+            <li><%= book.volumeInfo.title %></li>
+            <p> Author : </p>
+            <li><%= book.volumeInfo.authors %></li>
+            <p> Book Type : </p>
+            <li><%= book.volumeInfo.industryIdentifiers[0].type %></li>
+            <p> Book Image : </p>
+            <li><img src=<%=book.volumeInfo.imageLinks.thumbnail %></li>
+            <p> Book Description </p>
+            <li><%= book.volumeInfo.description %></li>
             <% }); %>
         </ul>
     </main>
-    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-    <script src="/server.js"></script>
-  </body>
+</body>
+
 </html>
