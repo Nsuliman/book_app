@@ -15,21 +15,19 @@
       <form action="/searches" method="post">
           <input id="searchbox" name="search" placeholder='Enter a Title Or Author' style="color: black;" />
         <br><br>
-        <div>
-            <label for="Title">Title</label> 
+        
+            <label class="container">Title 
           <input type="radio" name="searchtype" value="title" > 
-        </div>
+          <span class="checkmark"></span>
+            </label>
 
-        <div>
-            <label for="Author">Author</label> 
-          <input type="radio" name="searchtype" value="author"> 
-        </div>
-          
+            <label class="container">Author
+          <input type="radio" name="searchtype" value="author">
+          <span class="checkmark"></span> 
+            </label>
+
         <button> Search The Google Books API </button><br><br>
       </form>
     </main>
-    <footer><br><br>
-        This demo brought to you by Fatima and Nawal for Joking services.
-      </footer>
 </body>
 </html>
