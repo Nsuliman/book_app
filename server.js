@@ -49,50 +49,61 @@ server.set('view engine', 'ejs');
 //     res.redirect('/dataBook.html');
 // });
 
-/*************************************** */
 
-server.get('/searches' , (req,res) =>
-{
+/****************** ERRORS ********************* */
+
+server.get('/error', (request, response) => {
+    response.render('pages/error');
+});
+
+/****************** SEARCHES ********************* */
+
+server.get('/searches', (req, res) => {
     res.render('pages/index');
 });
 
-server.post('/searches', (req, res) =>{
+server.post('/searches', (req, res) => {
     let url = 'https://www.googleapis.com/books/v1/volumes?q=';
-        // console.log('urllllllllllllllllllllllllllllll : ', url);
+    // console.log('urllllllllllllllllllllllllllllll : ', url);
 
-        if (req.body.searchtype === 'title') {
-            url = url + req.body.search;
-        }
-        else if (req.body.searchtype === 'author') {
-            url = url + req.body.search;
-            // console.log(url)
-        }
+    if (req.body.searchtype === 'title') {
+        url = url + req.body.search;
+    }
+    else if (req.body.searchtype === 'author') {
+        url = url + req.body.search;
+        // console.log(url)
+    }
 
     superagent.get(url)
         .then(data => {
             // console.log('dataaaaaaaaaaaaaaaaaaaaaaaaaaaaa Boddddddddddddddy : ', data.body);
             // console.log('dataaaaaaaaaaaaaaaaaaaaaaaaaaaaa Itemmmmmmmmmmmmmmmms : ', data.body.items);
-            
+
             let book = data.body.items;
-            res.render('pages/searches/show', { books:book })
+            res.render('pages/searches/show', { books: book })
             // return book.items.map((rest) => {
             //     console.log(' rest : ', rest);
-                //  new Book(book);
-            });
-    });
-    
+            //  new Book(book);
+
+        })
+        .catch(error => {
+            console.log('Errorrrrrrrrrrrr : ', error);
+            res.render('pages/error');
+        });
+});
 
 
 
-    // function Book(data) {
-    //     this.title = data.volumeInfo.title;
-    //     this.author = data.volumeInfo.authors && data.volumeInfo || '';
-    //     this.ISBN = data.volumeInfo.industryIdentifiers.type && data.volumeInfo.industryIdentifiers || '';
-    //     this.image = data.imageLinks.thumbnail && data.imageLinks || '';
-    //     this.description = data.volumeInfo.description && data.volumeInfo || '';
 
-    // } // End of location constructor function 
+// function Book(data) {
+//     this.title = data.volumeInfo.title;
+//     this.author = data.volumeInfo.authors && data.volumeInfo || '';
+//     this.ISBN = data.volumeInfo.industryIdentifiers.type && data.volumeInfo.industryIdentifiers || '';
+//     this.image = data.imageLinks.thumbnail && data.imageLinks || '';
+//     this.description = data.volumeInfo.description && data.volumeInfo || '';
+
+// } // End of location constructor function 
 
 
 
-    server.listen(PORT, () => console.log('listening from port', PORT));
+server.listen(PORT, () => console.log('listening from port', PORT));
