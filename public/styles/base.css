@@ -1,8 +1,23 @@
+/* Styling index ejs  */
+
 body {
-    background-color: rgb(56, 58, 187);
+    background-color: rgb(29, 29, 31);
+    width: 500px;
+    margin: 0px auto;
     }
 
-form {
+    header {
+      background-color: black;
+      color: white;
+      padding: 10px;
+    }
+
+    main  {
+      background-color: gray;
+    }
+ 
+
+    form {
     display:flex;
     flex-direction:column;
     width: 300px;
@@ -13,19 +28,7 @@ form {
     display:flex;
     flex-direction:column;
     margin-bottom: 1.5em;
-    border: black solid 3px;
-    border-radius: 5px;
     font-size: x-large;
-  }
-
-  input {
-    display:flex;
-    flex-direction:column;
-    margin-bottom: 1.5em;
-    border: black solid 3px;
-    border-radius: 5px;
-    font-size: x-large;
-    padding: 10px;
   }
 
   footer {
