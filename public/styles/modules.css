@@ -14,7 +14,11 @@ main h2 {
   }
 
 #searchbox {
-    margin: 55px;
+    margin-left: 55px;
+    margin-right: 55px;
+    margin-top: 40px;
     padding: 20px;
     width: 350px ;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: x-large;
 }

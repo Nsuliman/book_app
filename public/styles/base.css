@@ -1,9 +1,10 @@
 /* Styling index ejs  */
 
 body {
-    background-color: rgb(29, 29, 31);
+    background-color: black;
     width: 500px;
     margin: 0px auto;
+    border: 3px solid gray;
     }
 
     header {
