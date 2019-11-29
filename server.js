@@ -75,7 +75,6 @@ server.post('/searches', (req, res) =>{
         }
 
     superagent.get(url)
-    .then(apiResponse => apiResponse.body.items.map(bookResult => new Book(bookResult)))
         .then(data => {
             // console.log('dataaaaaaaaaaaaaaaaaaaaaaaaaaaaa Boddddddddddddddy : ', data.body);
             // console.log('dataaaaaaaaaaaaaaaaaaaaaaaaaaaaa Itemmmmmmmmmmmmmmmms : ', data.body.items);
@@ -95,14 +94,14 @@ server.post('/searches', (req, res) =>{
 
 
 
-    function Book(data) {
-        this.title = data.volumeInfo.title || 'No title found';
-        this.author = data.volumeInfo.authors && data.volumeInfo || 'No author found';
-        // this.ISBN = data.volumeInfo.industryIdentifiers.type && data.volumeInfo.industryIdentifiers || 'No title found';
-        this.image = data.imageLinks.thumbnail && data.imageLinks || 'No image found';
-        this.description = data.volumeInfo.description && data.volumeInfo || 'No description found';
+    // function Book(data) {
+    //     this.title = data.volumeInfo.title;
+    //     this.author = data.volumeInfo.authors && data.volumeInfo || '';
+    //     this.ISBN = data.volumeInfo.industryIdentifiers.type && data.volumeInfo.industryIdentifiers || '';
+    //     this.image = data.imageLinks.thumbnail && data.imageLinks || '';
+    //     this.description = data.volumeInfo.description && data.volumeInfo || '';
 
-    } // End of location constructor function 
+    // } // End of location constructor function 
 
 
 
