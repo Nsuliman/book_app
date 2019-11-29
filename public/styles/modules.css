@@ -1,0 +1,28 @@
+/* Styling index ejs  */
+
+main h2 {
+    background-color: dimgrey;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin: 0px auto;
+}
+
+  /******** Text box and radio button **********/
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: black;
+    opacity: 1; /* Firefox */
+  }
+
+  /* Text box input */
+#searchbox {
+    margin-left: 55px;
+    margin-right: 55px;
+    margin-top: 30px;
+    padding: 20px;
+    width: 350px ;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: x-large;
+    border-radius: 10px;
+}
