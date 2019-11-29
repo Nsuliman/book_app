@@ -18,14 +18,13 @@
         <main>
             <ul>
                 <% books.forEach( (book) => { %>
+                    <p> ** Book Details ** </p>
+                <li><img src=<%=book.volumeInfo.imageLinks.thumbnail %></li> 
                 <li>Title : <%= book.volumeInfo.title %></li>
                 <li>Author : <%= book.volumeInfo.authors %></li>
-                <li>Book Type : <%= book.volumeInfo.industryIdentifiers[0].type %></li>
-                <p> ** Book Image ** </p>
-                <li><img src=<%=book.volumeInfo.imageLinks.thumbnail %></li> <li>Book Description :
-                    <%= book.volumeInfo.description %></li> <br><br><br>
+                <li>Book Description :<%= book.volumeInfo.description %></li> <br><br><br>
                 <% }); %>
-               
+
             </ul>
         </main>
 </body>
