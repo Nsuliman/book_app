@@ -83,16 +83,14 @@ server.post('/searches', (req, res) => {
             res.render('pages/searches/show', { books: book })
             // return book.items.map((rest) => {
             //     console.log(' rest : ', rest);
-            //  new Book(book);
 
-        })
-        .catch(error => {
-            console.log('Errorrrrrrrrrrrr : ', error);
-            res.render('pages/error');
-        });
-});
-
-
+                //  new Book(book);
+            })
+            .catch(error => {
+                console.log('Errorrrrrrrrrrrr : ', error);
+                res.render('pages/error');
+            });
+    });
 
 
 // function Book(data) {

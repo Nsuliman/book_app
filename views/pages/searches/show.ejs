@@ -4,25 +4,28 @@
 <head>
     <title>Books</title>
     <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/modules.css">
+    <link rel="stylesheet" href="styles/layout.css">
+
 </head>
 
 <body>
+    <header>
+        <h1> Best Books !</h1>
+    </header>
     <main>
-        <ul>
-            <% books.forEach( (book) => { %>
-            <p> Title : </p>
-            <li><%= book.volumeInfo.title %></li>
-            <p> Author : </p>
-            <li><%= book.volumeInfo.authors %></li>
-            <p> Book Type : </p>
-            <li><%= book.volumeInfo.industryIdentifiers[0].type %></li>
-            <p> Book Image : </p>
-            <li><img src=<%=book.volumeInfo.imageLinks.thumbnail %></li>
-            <p> Book Description </p>
-            <li><%= book.volumeInfo.description %></li>
-            <% }); %>
-        </ul>
-    </main>
+        <h2> Search Results </h2>
+
+            <div class="bookdetails">
+                <% books.forEach( (book) => { %>
+                    <p> ** Book Details ** </p><br>
+                <img class="bookimage" src=<%=book.volumeInfo.imageLinks.thumbnail %><br>
+                <p class="booktitle">Title : <%= book.volumeInfo.title %></p>
+                <p class="bookauthor">Author : <%= book.volumeInfo.authors %></p>
+                <p class="bookdescp">Book Description :<%= book.volumeInfo.description %></p> <br><br><br>
+                <% }); %>
+            </div>
+        </main>
 </body>
 
 </html>
