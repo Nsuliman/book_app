@@ -49,6 +49,12 @@ server.set('view engine', 'ejs');
 //     res.redirect('/dataBook.html');
 // });
 
+/****************** ERRORS ********************* */
+
+server.get('/error', (request, response) => {
+    response.render('pages/error');
+});
+
 /*************************************** */
 
 server.get('/searches' , (req,res) =>
@@ -78,6 +84,10 @@ server.post('/searches', (req, res) =>{
             // return book.items.map((rest) => {
             //     console.log(' rest : ', rest);
                 //  new Book(book);
+            })
+            .catch(error => {
+                console.log('Errorrrrrrrrrrrr : ', error);
+                res.render('pages/error');
             });
     });
     
