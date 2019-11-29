@@ -15,17 +15,15 @@
     </header>
     <main>
         <h2> Search Results </h2>
-        <main>
-            <ul>
+            <div class="bookdetails">
                 <% books.forEach( (book) => { %>
-                    <p> ** Book Details ** </p>
-                <li><img src=<%=book.volumeInfo.imageLinks.thumbnail %></li> 
-                <li>Title : <%= book.volumeInfo.title %></li>
-                <li>Author : <%= book.volumeInfo.authors %></li>
-                <li>Book Description :<%= book.volumeInfo.description %></li> <br><br><br>
+                    <p> ** Book Details ** </p><br>
+                <img class="bookimage" src=<%=book.volumeInfo.imageLinks.thumbnail %><br>
+                <p class="booktitle">Title : <%= book.volumeInfo.title %></p>
+                <p class="bookauthor">Author : <%= book.volumeInfo.authors %></p>
+                <p class="bookdescp">Book Description :<%= book.volumeInfo.description %></p> <br><br><br>
                 <% }); %>
-
-            </ul>
+            </div>
         </main>
 </body>
 

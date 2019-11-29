@@ -26,3 +26,12 @@ main h2 {
     font-size: x-large;
     border-radius: 10px;
 }
+
+  /******** show page **********/
+
+.bookdetails {
+    position: relative;
+    text-align: center;
+    background-color: rgb(172, 175, 175);
+    border: 3px solid gray;
+}
