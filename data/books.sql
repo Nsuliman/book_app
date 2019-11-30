@@ -5,8 +5,10 @@ image_url VARCHAR(255),
   title VARCHAR(255),
   author VARCHAR(255),
     booktype VARCHAR(255),
-  descrp TEXT
+  descrp TEXT,
+  bookshelf VARCHAR(255)
+
 );
 
-INSERT INTO booksql (image_url,title, author, booktype, descrp )
-VALUES('My Father','Nawal','image','Lovely dad','1961');
+INSERT INTO booksql (image_url,title, author, booktype, descrp, bookshelf)
+VALUES('My Father','Nawal','image','Lovely dad','1961','fantasy');

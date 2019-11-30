@@ -90,14 +90,11 @@ server.post('/searches', (req, res) => {
         });
 });
 
-    /*************************************** */
+    /******************** Select Book ******************* */
 
     server.get('/selectbook', (req, res) => {
-    res.render('pages/searches/new');
+    res.render('pages/searches/show');
     });
-
-
-
 
 
 // function Book(data) {
