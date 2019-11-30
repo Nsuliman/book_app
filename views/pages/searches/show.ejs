@@ -22,7 +22,8 @@
                 <img class="bookimage" src=<%=book.volumeInfo.imageLinks.thumbnail %><br>
                 <p class="booktitle">Title : <%= book.volumeInfo.title %></p>
                 <p class="bookauthor">Author : <%= book.volumeInfo.authors %></p>
-                <p class="bookdescp">Book Description :<%= book.volumeInfo.description %></p> <br><br><br>
+                <p class="bookdescp">Book Description :<%= book.volumeInfo.description %></p>
+                <p class="booktype"> ISBN : <%= book.volumeInfo.industryIdentifiers[0].type %></p><br><br>
                 <% }); %>
             </div>
         </main>
