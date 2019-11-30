@@ -37,7 +37,7 @@ button {
   color: white;
   padding: 20px;
   width: 390px ;
-  margin-left: 55px;
+  margin-left: 0px;
   margin-right: 55px;
   margin-top: 30px;
   text-align: center;
@@ -47,3 +47,4 @@ button {
 }
 
 /* End of styyling lab11  */
+
