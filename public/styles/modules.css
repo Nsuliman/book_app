@@ -34,10 +34,12 @@ main h2 {
     text-align: center;
     background-color: rgb(172, 175, 175);
     border: 3px solid gray;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .bookdescp {
-  background-color: white;
+  background-color: rgb(245, 237, 237);
   border: 1px solid white;
   border-radius: 10px;
+  font-family: cursive;
 }
