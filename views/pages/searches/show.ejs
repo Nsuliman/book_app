@@ -23,8 +23,8 @@
                 <p class="bookauthor">Author : <%= book.volumeInfo.authors %></p>
                 <p class="booktype"> ISBN : <%= book.volumeInfo.industryIdentifiers[0].type %></p>
                 <p class="bookdescp">Book Description :<%= book.volumeInfo.description %></p>
-                <form action="/selectbook" method="POST">
-                <button class="selectbutton" type="submit"> Select This Book </button>
+                <form action="/pages/searches/new" method="POST">
+                   <button class="selectbutton" type="submit"> Select This Book </button>
             </form>
                 <br><br><br><br>
             </div>

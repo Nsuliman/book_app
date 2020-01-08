@@ -93,10 +93,14 @@ server.post('/searches', (req, res) => {
     /******************** Select Book ******************* */
 
     server.get('/selectbook', (req, res) => {
-    res.render('pages/searches/show');
+        res.render('pages/searches/show');
     });
+    server.post('/selectbook',selectedbook);
 
-
+    function selectedbook(req, res) {
+        let { title, authors, isbn, image, desc } = req.body
+        res.render('pages/searches/new', { book: req.body })
+    }
 // function Book(data) {
 //     this.title = data.volumeInfo.title;
 //     this.author = data.volumeInfo.authors && data.volumeInfo || '';
